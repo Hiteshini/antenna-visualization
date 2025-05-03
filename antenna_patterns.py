@@ -1,8 +1,6 @@
-# antenna_patterns.py
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Simple isotropic pattern in polar plot
 def plot_isotropic_pattern():
     theta = np.linspace(0, 2 * np.pi, 360)
     r = np.ones_like(theta)
@@ -13,7 +11,6 @@ def plot_isotropic_pattern():
     plt.savefig("plots/polar_pattern.png")
     plt.close()
 
-# Cosine-based directional pattern
 def plot_directional_pattern():
     theta = np.linspace(0, 2 * np.pi, 360)
     r = np.abs(np.cos(theta))
@@ -24,7 +21,6 @@ def plot_directional_pattern():
     plt.savefig("plots/directional_pattern.png")
     plt.close()
 
-# 3D radiation pattern using spherical coordinates
 def plot_3d_radiation_pattern():
     from mpl_toolkits.mplot3d import Axes3D
 
